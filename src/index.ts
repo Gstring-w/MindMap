@@ -1,4 +1,4 @@
-import { layout } from './render/index'
+import { layout, renderItem } from './render/index'
 import { mapInitializationSize } from './const'
 import { Config, CanvasSize } from './type'
 
@@ -16,6 +16,10 @@ class MindMap {
     constructor(el: string, config: Config) {
         this.container = $d.querySelector(el)
         this.config = config
+
+
+        if (!this.config.renderItem)
+            this.config.renderItem = renderItem
     }
 
     init() {

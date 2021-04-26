@@ -1,11 +1,7 @@
 import MindMap from './index'
+import exampleData from '../example/data'
 
-const data = {
-    id:'2313123',
-    topic:'12312313'
-}
-const mind = new MindMap('#mindMap',{
-    data
-})
+
+const mind = new MindMap('#mindMap', { data: exampleData })
 
 mind.init()
